@@ -19,7 +19,8 @@ async function fetchEventsFromTicketmaster() {
             return [];
         }
 
-        const url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${process.env.TICKETMASTER_API_KEY}&countryCode=TR&classificationName=Music&size=20&city=Istanbul`;
+        const url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${process.env.TICKETMASTER_API_KEY}&countryCode=TR&classificationName=Music&size=20`;
+
         const response = await fetch(url);
         const data = await response.json();
 
